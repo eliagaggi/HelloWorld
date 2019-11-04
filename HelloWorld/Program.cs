@@ -40,21 +40,21 @@ namespace HelloWorld
             Console.WriteLine(stringa1);
             Console.WriteLine(stringa2);
 
-            object oggetto;
+            object oggetto;     //classe da cui ereditano tutti gli oggetti in c#
 
-            Person luca = new Person("Luca", "Lippi");
+            Person luca = new Person("Luca", "Lippi");      //inizializzazione di un oggetto
             luca.eta = 18;
 
             Console.WriteLine(luca.Anagrafica());
 
-            Person giovanni = luca;
+            Person giovanni = luca;     //siccome giovanni e luca puntano alla stessa variabile di memoria se cambio gianni cambio anche luca
             giovanni.nome = "Giovanni";
 
             Console.WriteLine(luca.Anagrafica());
             Console.WriteLine(giovanni.Anagrafica());
 
-
-
+            Person gianni = new Person("Gianni", "Rossi", 170, 90);
+            Console.WriteLine(gianni.Anagrafica());
         }
     }
 }
